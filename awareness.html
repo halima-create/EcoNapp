@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diaper Collection | Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="awareness">
+  <header class="topbar">
+    <div class="brand-sm">Diaper Collection</div>
+    <nav class="topnav">
+      <a href="points.html" class="btn light">Check My Points</a>
+      <button id="logoutBtn" class="btn">Logout</button>
+    </nav>
+  </header>
+
+  <main class="container card">
+    <h2>Welcome, <span id="welcomeName">Customer</span> 👋</h2>
+
+    <section class="grid-2">
+      <div>
+        <h3>Why collect diapers?</h3>
+        <ul class="bullets">
+          <li>Reduces landfill volume and leachate contamination</li>
+          <li>Cuts methane emissions from decomposing organics</li>
+          <li>Separates sanitary waste to protect public health</li>
+        </ul>
+
+        <h3>What we do: Pyrolysis ♻️</h3>
+        <p>
+          We apply <strong>pyrolysis</strong>—heating waste in the absence of oxygen—to convert
+          diapers into useful outputs like oil, gas, and char. This lowers volume, recovers energy,
+          and keeps neighborhoods cleaner.
+        </p>
+        <p class="note">Every 10 diapers you notify earns you <strong>5 points</strong>.</p>
+      </div>
+
+      <div class="action-box">
+        <h3>Have diapers to pick up?</h3>
+        <p>Click below to notify us. We’ll record your count and update your points.</p>
+        <button id="notifyBtn" class="btn primary big">Notify Diapers</button>
+        <div class="mini">We’ll also alert the company team with your name, address and contact.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- On-screen modal: earned points -->
+  <div id="pointsModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-title">🎉 Points Updated</div>
+      <div id="pointsMsg" class="modal-body"></div>
+      <div class="modal-actions">
+        <button id="addMoreBtn" class="btn success">Add More</button>
+        <button id="okBtn" class="btn">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- On-screen modal: enter diaper count -->
+  <div id="countModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="modal-title">Enter Diaper Count</div>
+      <label class="modal-input">
+        <input type="number" id="diaperInput" min="0" step="1" placeholder="e.g. 10" />
+      </label>
+      <div class="modal-actions">
+        <button id="countCancel" class="btn">Cancel</button>
+        <button id="countOk" class="btn primary">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

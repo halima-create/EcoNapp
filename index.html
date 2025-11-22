@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Diaper Collection | Sign In</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="index">
+  <div class="container card">
+    <h1 class="brand">Diaper Collection</h1>
+    <p class="subtitle">Customer ↔ Company interface</p>
+
+    <div class="split">
+      <!-- Returning user -->
+      <div class="panel">
+        <h2>Returning user</h2>
+        <form id="returnForm">
+          <label>Contact Number
+            <input type="tel" id="returnContact" placeholder="e.g. 9876543210" required />
+          </label>
+          <button type="submit" class="btn primary">Continue</button>
+          <p class="hint">If you already signed up earlier, just enter your contact number.</p>
+          <div id="returnError" class="error"></div>
+        </form>
+      </div>
+
+      <!-- New user -->
+      <div class="panel">
+        <h2>New user</h2>
+        <form id="newUserForm">
+          <label>Full Name
+            <input type="text" id="name" required />
+          </label>
+          <label>Email Address
+            <input type="email" id="email" required />
+          </label>
+          <label>Email Password
+            <input type="password" id="password" required />
+          </label>
+          <label>Collection Address
+            <textarea id="address" rows="3" required></textarea>
+          </label>
+          <label>Contact Number
+            <input type="tel" id="contact" required />
+          </label>
+          <button type="submit" class="btn success">Create Account</button>
+          <div id="newUserError" class="error"></div>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <a href="company.html" class="link">Company Console</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
